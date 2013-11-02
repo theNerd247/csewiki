@@ -1,0 +1,66 @@
+# CSEWiki Testing Log
+
+## Summary
+- - -
+This is the testing log for setting up a test CSEWiki. The goal of the test
+CSEWiki is to work out the bugs and figure out the dependencies needed to
+install and maintain the CSEWiki. 
+
+## Computer Specs
+- - -
+The machine used to run the test project will be on a virtual machine. The host
+OS for this virtual machine is. The specs for the host machine
+are below: 
+
+* Processor: Intel Pentium (2.0GHz, Dual Core) (x86 architecture)
+* RAM: 3.7G
+* OS: Archlinux
+* Virtual Machine Software: Virtual Box
+
+The specs for the virtual machine OS are below: 
+
+* Processor: Intel Pentium (2.00Ghz, Dual Core)
+* RAM: 1.0G
+* OS: Windows 7 Professional (32 bit version)
+
+## Software Specs
+- - -
+XAMPP is used to install and manage the required software. Below is the software
+used to satisfy the requirement of MediaWiki: 
+
+* Web Server: Apache Web Server (v2.4.4) -- installed at C:\xampp\apache
+* Data Base: MySQL (v5.5.32) -- installed at C:\xampp\mysql
+* PHP (v5.4.19) -- installed at C:\xampp\php
+
+## Daily Log
+- - - 
+### 2013-11-02 
+#### Installed Apache,MySQL,and PHP with XAMPP 
+Current configuration of XAMPP:   
+
+* Install directory:  C:\xampp
+* Modules loaded: Apache, MySQL
+* Ports: Apache: 80 (SSL: 443); MySQL: 3306;
+
+#### Research
+* Researching software dependencies for CSEWiki (see the Requirements section in
+  [install][1] for the latest dependencies).
+* Created install page, and testlog page
+
+#### Installed MediaWiki
+* See [Installing MediaWiki][2] section of the install page for details.
+* 7-Zip required to unpackage MediaWiki tarball (install directory: C:\Program
+  Files\7-Zip)
+* Installed gvim74 (or simply Vim) for text editing puroses
+* MediaWiki directory path: "C:\xampp\htdocs\csewiki"
+
+#### TODO
+* Research how MySQL works (databases, permissions, engines, etc..)
+* Research how XAMPP works 
+* Research how to configure wiki (skins, pages, run-level stuff)
+* Research MediaWiki Syntax
+* Create test pages for test wiki results
+
+- - -
+[1]: install.html
+[2]: install.html/#InstWiki

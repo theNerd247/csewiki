@@ -1,0 +1,53 @@
+<h1>CSEWiki Structure (for custom wiki-engine)</h1>
+
+<hr>
+
+<p>The CSEWiki shall be composed as a collection of topics, each topic being unique
+and made of any number of subtopics. Each topic shall be defined in a text-file
+known as a <strong>topic-file</strong>. Along with each topic file shall be another
+(optional) text file called a <strong>tag-file</strong> which defines the tags (or related
+topics) related to the given topic. </p>
+
+<p>The CSEWiki shall be published as a website with one web-page per topic. Each
+web-page shall be generated from a correlating <strong>topic-file</strong> and will be styled
+by a css file called "style.css". </p>
+
+<h2>Featrures Needed</h2>
+
+<hr>
+
+<ol>
+<li>code blocks </li>
+<li>tags </li>
+<li>links </li>
+<li>headings (at least 5 heirchy depth)</li>
+<li>toc </li>
+<li>simple gui, and easy to navigate interface</li>
+<li>footnotes </li>
+<li>basic image handling</li>
+</ol>
+
+<h2>File Hierarchy</h2>
+
+<hr>
+
+<h3>Directories</h3>
+
+<p><strong>NOTE:</strong> all directories and files shall be lowercased. Each directory shall be
+named with one word made of any number of alpha-numeric characters (if two or
+more words must be used then the hyphen "-" shall be used instead of spaces).</p>
+
+<p>All files related to the CSEWiki shall reside under a single parent directory
+called <strong>csewiki</strong>. All web-page related files shall reside under the <strong>html</strong>
+directory. All topic-files shall reside under the <strong>topic</strong> directory. Under 
+<strong>topic</strong> can reside other sub-directories for organizing topic-files. The name
+of the general-topic directories shall be named for the general topic that
+summarizes all the topics contained within. For example a general topic
+directory named "languages" will contain topic-files "c.txt", "java.txt",
+"cplusplus.txt" and "c-sharp.txt" topic-files and their respective tag files.</p>
+
+<h3>Topic Files</h3>
+
+<p>Each topic file will contain the information for a single topic. </p>
+
+<h3>Text Files</h3>

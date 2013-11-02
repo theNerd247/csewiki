@@ -1,0 +1,67 @@
+# CSEWiki Installation Procedures
+
+### Table of Contents
+  [Requirements](#Req)  
+  [Installing Requirements](#InstReq)  
+  [Installing MediaWiki](#InstWiki)  
+
+<a name="Req"></a>
+## Requirements 
+- - -
+* A web server is required to serve the requested pages to the client browser.
+* PHP is required to run the software.
+* A database server is required to store the pages and site data. 
+
+### Database Server
+The database server that will be run by the CSE data center and will use
+whatever database software is being used there. Later there shall be some
+documentation explaining the details of the database server. 
+
+### Web Server
+Again the webserver will be run by the CSE data center; using whatever software
+is provided there. Also, more detailed documentation will be created to explain
+the details of the webserver setup.  
+
+The web server will be used to display the wiki pages to the world...like all
+web servers do. The web server should be easy to manage and set up. 
+
+### PHP
+>"PHP is the programming language in which MediaWiki is written, and is required
+>in order to run the software." -- [MediaWiki][1]  
+
+PHP-5.3.2 or later is required to run Media Wiki. 
+
+<a name="InstReq"></a>
+## Installing Apache, PHP, MySQL
+- - -
+Apache, PHP, MySQL can all be installed using a single application that manages
+them with a single control panel: XAMPP. The installation is straight forward
+and can be found [here][2].  
+
+To install on Windows simply download the [installer][3] and run it. 
+
+<a name="InstWiki"></a>
+## Installing MediaWiki
+- - -
+Below is the log of installing the test. If you get lost see the installation
+guide MediaWiki created [here][5].   
+
+1. Download the latest version [here][4].
+2. The file will be a *.tar.gz file use 7-Zip to decompress it.
+3. Once the files are extracted upload them to the web-servers main (or web) directory
+4. Renamed the move directory (which was extracted from the tarball) to whatever
+   you want the URL to be named to. This directory will be called the _wiki
+   directory_
+5. Make sure the web server and database server are up and running.
+6. Open a web-browser and go to the URL that points to the _wiki directory_
+7. There should be a web-based installer that media wiki created, it will guide
+   you through creating the wiki. If you need help see the MediaWiki [Config
+   Script page][6]
+
+- - -
+[1]: http://www.mediawiki.org/wiki/Manual:Installation_requirements
+[2]: http://www.apachefriends.org/en/xampp.html
+[3]: http://www.apachefriends.org/en/xampp-windows.html
+[4]: http://www.mediawiki.org/wiki/Download
+[5]: http://www.mediawiki.org/wiki/Manual:Installing_MediaWiki
+[6]: http://www.mediawiki.org/wiki/Manual:Config_script
