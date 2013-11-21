@@ -1,0 +1,127 @@
+<h1>CSEWiki Testing Log</h1>
+
+<h2>Summary</h2>
+
+<hr>
+
+<p>This is the testing log for setting up a test CSEWiki. The goal of the test
+CSEWiki is to work out the bugs and figure out the dependencies needed to
+install and maintain the CSEWiki. </p>
+
+<h2>Hardware</h2>
+
+<hr>
+
+<p>All developement will be moved to a virtual machine that is hosted by the
+database center on campus. Below are the specs needed for the virtual
+machine:  </p>
+
+<ul>
+<li>OS: CentOS-6.4-i386</li>
+<li>RAM: </li>
+<li>HD-Space: </li>
+</ul>
+
+<h2>Software</h2>
+
+<hr>
+
+<h2>Daily Log</h2>
+
+<hr>
+
+<h3>2013-11-02</h3>
+
+<h4>Installed Apache,MySQL,and PHP with XAMPP</h4>
+
+<p>Current configuration of XAMPP:   </p>
+
+<ul>
+<li>Install directory:  C:\xampp</li>
+<li>Modules loaded: Apache, MySQL</li>
+<li>Ports: Apache: 80 (SSL: 443); MySQL: 3306;</li>
+</ul>
+
+<h4>Research</h4>
+
+<ul>
+<li>Researching software dependencies for CSEWiki (see the Requirements section in
+<a href="install.html">install</a> for the latest dependencies).</li>
+<li>Created install page, and testlog page</li>
+</ul>
+
+<h4>Installed MediaWiki</h4>
+
+<ul>
+<li>See <a href="install.html/#InstWiki">Installing MediaWiki</a> section of the install page for details.</li>
+<li>7-Zip required to unpackage MediaWiki tarball (install directory: C:\Program
+Files\7-Zip)</li>
+<li>Installed gvim74 (or simply Vim) for text editing puroses</li>
+<li>MediaWiki directory path: "C:\xampp\htdocs\csewiki"</li>
+<li>admin username: "Cse admin"</li>
+<li>admin password: "</li>
+</ul>
+
+<h3>2013-11-09</h3>
+
+<h4>Research</h4>
+
+<ul>
+<li>obtained a book from Christine Bryant on PHP</li>
+<li>writen a test html-form to learn php</li>
+</ul>
+
+<h3>2013-11-14</h3>
+
+<h4>Created filler logo</h4>
+
+<ul>
+<li>Used gimp to create a basic logo. </li>
+<li>To change the logo edit the csewiki/LocalSettings.php file </li>
+<li>logo image details: size=(180px, 180px), location: $wgStylesPath/common/images/logo.png</li>
+</ul>
+
+<h4>Created new user account and test page</h4>
+
+<ul>
+<li>username: testuser</li>
+<li>password: temp000 </li>
+<li>Created new test page - Title: "</li>
+</ul>
+
+<h4>Edited LocalSettings</h4>
+
+<ul>
+<li>/csewiki/LocalSettings.php contains the configuration settings for the user
+groups</li>
+</ul>
+
+<h3>2013-11-16</h3>
+
+<h4>Reset admin password</h4>
+
+<ul>
+<li><em>NOTE:</em> passwords for MediaWiki are stored in the user table and the passwords
+are stored as MD5 sums. </li>
+<li>"Cse admin" password restored to : "blarg"</li>
+<li><p>use SQL command:   </p>
+
+<p>UPDATE user SET user<em>password = MD5(CONCAT(user</em>id,'-',MD5('<newpasswordhere>'))) WHERE user_id = <idofuserhere></p></li>
+</ul>
+
+<h3>2013-11-21</h3>
+
+<h4>Moving System to Linux Machine</h4>
+
+<ul>
+<li>CentOS is better for this kind of stuff</li>
+<li>downloaded from gatech mirror</li>
+<li>put in ticket for CentOS Virtual Machine to be setup</li>
+</ul>
+
+<hr>
+
+<p><a href="project.html">Home</a> <br>
+Author: Noah Harvey</p>
+
+<hr>

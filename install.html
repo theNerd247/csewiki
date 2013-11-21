@@ -4,7 +4,8 @@
 
 <p><a href="#Req">Requirements</a> <br>
   <a href="#InstReq">Installing Requirements</a> <br>
-  <a href="#InstWiki">Installing MediaWiki</a>  </p>
+  <a href="#InstWiki">Installing MediaWiki</a> <br>
+  <a href="#Config">Configuring MediaWiki</a></p>
 
 <p><a name="Req"></a></p>
 
@@ -76,5 +77,42 @@ directory</em></li>
 you through creating the wiki. If you need help see the MediaWiki <a href="http://www.mediawiki.org/wiki/Manual:Config_script">Config
 Script page</a></li>
 </ol>
+
+<p><a name="Config"></a></p>
+
+<h2>Configuring For CSEWiki</h2>
+
+<p>MediaWiki is configured through a series of php webpages. Below are the steps
+used for customizing CSEWiki configuration (including skins). For more detailed
+reference on how to actually configure MediaWiki see their <a href="http://www.mediawiki.org/wiki/Manual:Configuration">wiki page</a>.</p>
+
+<h3>Config Files</h3>
+
+<ul>
+<li>LocalSettings.php -- the main configuration file that is used to configure the
+MediaWiki PHP global variables.</li>
+</ul>
+
+<h3>User Rights</h3>
+
+<p>See the <a href="http://www.mediawiki.org/wiki/Manual:User">Media Wiki page</a> for details. <br>
+Inside of LocalSettings.php find a section that says: </p>
+
+<pre><code>    #--USER PERMISSIONS-----------------
+    $wgGroupPermissions ...
+</code></pre>
+
+<p>Here is where we will put our default user permission settings. If this section
+does not exist then create it at the bottom of the LocalSettings.php file.</p>
+
+<h3>Skins</h3>
+
+<p>See the <a href="http://www.mediawiki.org/wiki/Manual:Skin_configuration">MediaWiki page</a> for details. <br>
+Skins are found in the /cse/skins directory.</p>
+
+<hr>
+
+<p><a href="project.html">Home</a> <br>
+Author: Noah Harvey</p>
 
 <hr>
