@@ -1,0 +1,5 @@
+x 2013-11-16 figure out "Cse admin" password
+x 2013-11-22 put in ticket for virtual machine server
+x 2013-11-23 Create test pages for test wiki results
+x 2013-11-23 Research MediaWiki Syntax
+x 2013-12-04 CentOS VM created and tested

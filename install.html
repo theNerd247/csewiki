@@ -80,7 +80,9 @@ Script page</a></li>
 
 <p><a name="Config"></a></p>
 
-<h2>Configuring For CSEWiki</h2>
+<h2>Configuring CSEWiki</h2>
+
+<hr>
 
 <p>MediaWiki is configured through a series of php webpages. Below are the steps
 used for customizing CSEWiki configuration (including skins). For more detailed
@@ -95,7 +97,7 @@ MediaWiki PHP global variables.</li>
 
 <h3>User Rights</h3>
 
-<p>See the <a href="http://www.mediawiki.org/wiki/Manual:User">Media Wiki page</a> for details. <br>
+<p>See the <a href="http://www.mediawiki.org/wiki/Manual:User_rights">Media Wiki page</a> for details. <br>
 Inside of LocalSettings.php find a section that says: </p>
 
 <pre><code>    #--USER PERMISSIONS-----------------
@@ -109,6 +111,21 @@ does not exist then create it at the bottom of the LocalSettings.php file.</p>
 
 <p>See the <a href="http://www.mediawiki.org/wiki/Manual:Skin_configuration">MediaWiki page</a> for details. <br>
 Skins are found in the /cse/skins directory.</p>
+
+<h3>Database Config</h3>
+
+<p>CSEWiki should use some SQL database server (preferably MySQL) to hold most (if
+not all) of its data. All of the tables that are created contain necessary data
+for the wiki to operate (page text, page metadata, user permissions, passwords,
+etc...).</p>
+
+<h4>Useful Tables</h4>
+
+<ul>
+<li><a href="https://www.mediawiki.org/wiki/Manual:Database_layout">Database Layout</a></li>
+<li><a href="https://www.mediawiki.org/wiki/Manual:User_table">User</a></li>
+<li><a href="https://www.mediawiki.org/wiki/Manual:Text_table">Text</a></li>
+</ul>
 
 <hr>
 

@@ -1,8 +1,5 @@
 Research how MySQL works (databases, permissions, engines, etc..)
 Research how to configure wiki (skins, pages, run-level stuff)
-Research MediaWiki Syntax
-Create test pages for test wiki results
 Clean up all of the wiki pages (the ones that don't have  stuff on them)
-x figure out "Cse admin" password
-move system to CentOS vbox
-x put in ticket for virtual machine server
+speed up the response time of the csewiki
+create a custom skin
