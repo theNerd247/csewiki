@@ -1,0 +1,160 @@
+<h1>CSEWiki Installation Procedures</h1>
+
+<h3>Table of Contents</h3>
+
+<p><a href="#Req">Requirements</a> <br>
+  <a href="#InstReq">Installing Requirements</a> <br>
+  <a href="#InstWiki">Installing MediaWiki</a> <br>
+  <a href="#Config">Configuring MediaWiki</a>
+<a name="Req"></a></p>
+
+<h2>Requirements</h2>
+
+<hr>
+
+<ul>
+<li>A web server is required to serve the requested pages to the client browser.</li>
+<li>PHP is required to run the software.</li>
+<li>A database server is required to store the pages and site data. </li>
+</ul>
+
+<h3>Database Server</h3>
+
+<p>The database server that will be run by the CSE data center and will use
+whatever database software is being used there. Later there shall be some
+documentation explaining the details of the database server. </p>
+
+<h3>Web Server</h3>
+
+<p>Again the webserver will be run by the CSE data center; using whatever software
+is provided there. Also, more detailed documentation will be created to explain
+the details of the webserver setup.  </p>
+
+<p>The web server will be used to display the wiki pages to the world...like all
+web servers do. The web server should be easy to manage and set up. </p>
+
+<h3>PHP</h3>
+
+<blockquote>
+  <p>"PHP is the programming language in which MediaWiki is written, and is required
+in order to run the software." -- <a href="http://www.mediawiki.org/wiki/Manual:Installation_requirements">MediaWiki</a>  </p>
+</blockquote>
+
+<p>PHP-5.3.2 or later is required to run Media Wiki. </p>
+
+<p><a name="InstReq"></a></p>
+
+<h2>Installing Apache, PHP, MySQL</h2>
+
+<hr>
+
+<p>Apache, PHP, MySQL can all be installed using a single application that manages
+them with a single control panel: XAMPP. The installation is straight forward
+and can be found <a href="http://www.apachefriends.org/en/xampp.html">here</a>.  </p>
+
+<p>To install on Windows simply download the <a href="http://www.apachefriends.org/en/xampp-windows.html">installer</a> and run it. </p>
+
+<p><a name="InstWiki"></a></p>
+
+<h2>Installing MediaWiki</h2>
+
+<hr>
+
+<p>Below is the log of installing the test. If you get lost see the installation
+guide MediaWiki created <a href="http://www.mediawiki.org/wiki/Manual:Installing_MediaWiki">here</a>.   </p>
+
+<ol>
+<li>Download the latest version <a href="http://www.mediawiki.org/wiki/Download">here</a>.</li>
+<li>The file will be a *.tar.gz file use 7-Zip to decompress it.</li>
+<li>Once the files are extracted upload them to the web-servers main (or web) directory</li>
+<li>Renamed the move directory (which was extracted from the tarball) to whatever
+you want the URL to be named to. This directory will be called the <em>wiki
+directory</em></li>
+<li>Make sure the web server and database server are up and running.</li>
+<li>Open a web-browser and go to the URL that points to the <em>wiki directory</em></li>
+<li>There should be a web-based installer that media wiki created, it will guide
+you through creating the wiki. If you need help see the MediaWiki <a href="http://www.mediawiki.org/wiki/Manual:Config_script">Config
+Script page</a></li>
+</ol>
+
+<p><a name="Config"></a></p>
+
+<h2>Configuring CSEWiki</h2>
+
+<hr>
+
+<p>MediaWiki is configured through a series of php webpages. Below are the steps
+used for customizing CSEWiki configuration (including skins). For more detailed
+reference on how to actually configure MediaWiki see their <a href="http://www.mediawiki.org/wiki/Manual:Configuration">wiki page</a>.</p>
+
+<h3>Config Files</h3>
+
+<ul>
+<li>LocalSettings.php -- the main configuration file that is used to configure the
+MediaWiki PHP global variables.</li>
+</ul>
+
+<h3>User Rights</h3>
+
+<p>See the <a href="http://www.mediawiki.org/wiki/Manual:User_rights">Media Wiki page</a> for details. <br>
+Inside of LocalSettings.php find a section that says: </p>
+
+<pre><code>    #--USER PERMISSIONS-----------------
+    $wgGroupPermissions ...
+</code></pre>
+
+<p>Here is where we will put our default user permission settings. If this section
+does not exist then create it at the bottom of the LocalSettings.php file.</p>
+
+<h3>Skins</h3>
+
+<p>See the <a href="http://www.mediawiki.org/wiki/Manual:Skin_configuration">MediaWiki page</a> for details. <br>
+Skins are found in the /cse/skins directory.</p>
+
+<h3>Database Config</h3>
+
+<p>CSEWiki should use some SQL database server (preferably MySQL) to hold most (if
+not all) of its data. All of the tables that are created contain necessary data
+for the wiki to operate (page text, page metadata, user permissions, passwords,
+etc...).</p>
+
+<h4>Useful Tables</h4>
+
+<ul>
+<li><a href="https://www.mediawiki.org/wiki/Manual:Database_layout">Database Layout</a></li>
+<li><a href="https://www.mediawiki.org/wiki/Manual:User_table">User</a></li>
+<li><a href="https://www.mediawiki.org/wiki/Manual:Text_table">Text</a></li>
+</ul>
+
+<h3>Performance</h3>
+
+<p>By default MediaWiki can run very slow. Below are some steps to speed up the
+fetch time of a wiki page. For more details see the MediaWiki page on
+<a href="http://www.mediawiki.org/wiki/Manual:Cache">cache</a>.</p>
+
+<h4>PHP Cache</h4>
+
+<p>Because PHP uses compiling to create a runable file there exists accelerator
+programs that lower the compile-time overhead for PHP scripts. The the test wiki
+PHP Accelerator was used.</p>
+
+<h4>Object Cache</h4>
+
+<p>Make the following changes to the LocalSettings.php file to enable object
+caching.</p>
+
+<pre><code>    $wgMainCacheType = CACHE_ANYTHING;
+</code></pre>
+
+<h4>HTTP Cache</h4>
+
+<p>Using some external form of caching http files will make the website go much
+faster. Most of the details for this are included in the link the MediaWiki page
+above.</p>
+
+<hr>
+
+<p><a href="project.html">Home</a> <br>
+Author: Noah Harvey</p>
+
+<hr>

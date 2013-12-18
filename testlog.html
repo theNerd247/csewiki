@@ -114,7 +114,7 @@ are stored as MD5 sums. </li>
 
 <ul>
 <li>CentOS is better for this kind of stuff</li>
-<li>see the <a href="install.html">Install Page</a> for more info regarding the move.</li>
+<li>requested linux server to be set up in the database center.</li>
 </ul>
 
 <h3>2013-11-22</h3>
@@ -147,7 +147,7 @@ details on creating a new page.</li>
 
 <h3>2013-12-04</h3>
 
-<h4>Virtual Machine created</h4>
+<h4>Virtual Machine created (CentOS)</h4>
 
 <ul>
 <li>virtual machine for CSEWiki has been successfully created</li>
@@ -161,8 +161,52 @@ details on creating a new page.</li>
 <ul>
 <li>research for daemon mangement on Centos</li>
 <li>installed MediaWiki on server</li>
-<li>moved project from personal work machine to server</li>
+<li>began moving project from personal work machine to server</li>
+<li>could not move project because the lack of internet access from the server is
+making it impossible to install packages.</li>
 </ul>
+
+<h3>2013-10-14</h3>
+
+<h4>Server</h4>
+
+<ul>
+<li>started httpd daemon on server (IT may not have opened port 80 for server)</li>
+<li><p>began configuring httpd daemon</p>
+
+<h4>Skins</h4></li>
+<li><p>began creating custom skin</p>
+
+<h4>Performance</h4></li>
+<li><p>began research in increasing csewiki performance</p></li>
+</ul>
+
+<h3>2013-10-16</h3>
+
+<h4>Change of Plan</h4>
+
+<p>After 2 months of attempting to configure MediaWiki software I began to
+realize the difficulty in performing basic management tasks. For instance
+creating a custom wiki skin involves writing thousands of PHP code which becomes
+very inefficient to manage or create. Also configuring user permissions requires
+the mantainer of a MediaWiki project write many lines of code for repetative
+tasks. While MediaWiki is very powerful it requires an entire team of developers
+to create/maintain which calls for a more expensive (cost and resources)
+project. Another issue is all data for MediaWiki is stored in a SQL server
+which adds another level of complexity to the project itself.</p>
+
+<p>After installing DokuWiki on my personal apache web server (DokuWiki does not
+require a database server) I found creating/managing the wiki is simpler than
+MediaWiki. Creating a new look and feel for the wiki took only a couple hours
+and the learning curve was a breeze. If this project is to remain as a low
+budget and easy to maitain project than I will be changing the wiki engine
+software to DokuWiki. </p>
+
+<p>Note: Due to this change install.txt has now been moved to
+<a href="install_mwiki.txt">install<em>mwiki.txt</a> for record keeping (later it will be
+moved as git has a great system for managing files).
+<a href="install_dwiki.txt">install</em>dwiki.txt</a> has been created to explain the
+installation and configuration process for DokuWiki.</p>
 
 <hr>
 
