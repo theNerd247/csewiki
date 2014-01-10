@@ -56,6 +56,90 @@ which package to install and how to configure it.</p>
 
 <hr>
 
+<p>The Dokuwiki software can be configured using the web-interface or by hand
+editing the text files associated with whatever your configuration desires are.
+Please see the dokuwiki <a href="https://www.dokuwiki.org/config">configuration</a> page before attempting any
+configuration.</p>
+
+<h3>Templates (Skins)</h3>
+
+<p>The GUI appearance of a dokuwiki template (in mediawiki terms it's a skin) can
+be customized easily through editing a series of css and php files. The CSEWiki
+template has been created using the dokuwiki starter template. See the dokuwiki
+<a href="https://www.dokuwiki.org/devel:templates">templates</a> page for details on how to configure the template. </p>
+
+<h3>Page Management</h3>
+
+<p>Pages are organized into namespaces. Each page has a "long" name with the name
+of the page being preceded by parent namespace names followed by a collon. For
+example: </p>
+
+<pre><code>    namespace1:namespace2:page_name.
+</code></pre>
+
+<p>The physical location of a page is: data/pages/ . Each page is a textfile so
+managing them is extremely easy. Below is an example location of a page. </p>
+
+<pre><code>    data/pages/namespace1/namespace2/page_name.txt
+</code></pre>
+
+<p>Note: the namespaces are actually directories. </p>
+
+<p>Below are the default namespaces to be created for the csewiki (these may change
+with time).</p>
+
+<h4>Topic(Namespace)</h4>
+
+<h4>Labs(lab)</h4>
+
+<p>lab related topics (printing, computer lab access, lab access, etc..) should be
+located atleast under the lab namespace.   </p>
+
+<h4>Tutorial(tutorial)</h4>
+
+<p>programing related tutorials/examples should be located under the tutorial namespace.  </p>
+
+<h4>Faculty(staff)</h4>
+
+<p>faculty/staff related how-to pages are to be under the staff namespace.  </p>
+
+<h4>Misc(<home>)</h4>
+
+<p>any topic that doesn't fit the above namespace should be namespaceless. If there
+becomes a substancial number of articles with a smiliar topic then a new
+namespace should be created.   </p>
+
+<h3>User Management</h3>
+
+<p>User permissions are managed through dokuwiki's ACL system. Their is a web-based
+front end for this configuration however you need to be logged in as root to
+access it. See the dokuwiki <a href="https://www.dokuwiki.org/acl">acl</a> page for details.</p>
+
+<h3>Superuser</h3>
+
+<p>There is to be only one super user for the entire wiki. The password for the
+super user should never be shared, and only one physical person should know the
+password. The superuser is called root (after the Linux superuser). This user
+will have 100% control over the wiki and will be only user to manage the ACL,
+users, and wiki configuration.</p>
+
+<p>Any kind of new user that is created can only be created by the root user.</p>
+
+<h3>Admins</h3>
+
+<p>Those given the admin privileges will have the ability to create and delete
+pages (user full rights). They will have no management privileges (they won't be
+able to access the ACL, wiki config, or user management). Admins are to
+administrate the content of the wiki, not the configuration of the wiki (that is
+left to the superuser).</p>
+
+<p>Currently only admins will have creating/editing privileges for the wiki.</p>
+
+<h3>New Users</h3>
+
+<p>Currently there is no need for regular users. By default regular users will only
+be able to read wiki pages (which you do not have to be logged-in to do). </p>
+
 <hr>
 
 <p><a href="project.html">Home</a> <br>

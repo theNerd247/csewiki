@@ -3,3 +3,7 @@ x 2013-11-22 put in ticket for virtual machine server
 x 2013-11-23 Create test pages for test wiki results
 x 2013-11-23 Research MediaWiki Syntax
 x 2013-12-04 CentOS VM created and tested
+x 2014-01-07 Research how to configure wiki (skins, pages, run-level stuff)
+x 2014-01-07 create a custom skin
+x 2014-01-07 
+x 2014-01-07 

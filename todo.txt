@@ -1,6 +1,7 @@
-Research how to configure wiki (skins, pages, run-level stuff)
 Clean up all of the wiki pages 
-create a custom skin
 clean up the testlog page
 clean up the install.txt page
-get the internet working on server
+fix the colors on the buttons
+create home page
+fix pages so the page name is automatically inserted at the top
+fix the button text color for admin pages
